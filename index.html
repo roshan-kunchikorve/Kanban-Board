@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Taskboard - Kanban board</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Taskboard</h1>
+    <form id="addForm">
+      <input id="title" placeholder="What needs doing?" maxlength="80" required aria-label="Task title">
+      <select id="priority" aria-label="Priority">
+        <option value="low">Low</option>
+        <option value="medium" selected>Medium</option>
+        <option value="high">High</option>
+      </select>
+      <button type="submit">Add task</button>
+    </form>
+  </header>
+
+  <main id="board">
+    <section class="column" data-status="todo">
+      <h2>To do <span class="count"></span></h2>
+      <ul class="list"></ul>
+    </section>
+    <section class="column" data-status="doing">
+      <h2>In progress <span class="count"></span></h2>
+      <ul class="list"></ul>
+    </section>
+    <section class="column" data-status="done">
+      <h2>Done <span class="count"></span></h2>
+      <ul class="list"></ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
